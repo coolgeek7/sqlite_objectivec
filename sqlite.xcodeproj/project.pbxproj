@@ -13,6 +13,8 @@
 		8632C9C42112FEA600707120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8632C9C32112FEA600707120 /* Assets.xcassets */; };
 		8632C9C72112FEA600707120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8632C9C52112FEA600707120 /* LaunchScreen.storyboard */; };
 		8632C9CA2112FEA600707120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632C9C92112FEA600707120 /* main.m */; };
+		8632C9D22112FEE200707120 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632C9D12112FEE200707120 /* Employee.m */; };
+		8632C9D52112FF8D00707120 /* DbUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632C9D42112FF8D00707120 /* DbUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		8632C9C62112FEA600707120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8632C9C82112FEA600707120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8632C9C92112FEA600707120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8632C9D02112FEE200707120 /* Employee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		8632C9D12112FEE200707120 /* Employee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		8632C9D32112FF8D00707120 /* DbUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DbUtil.h; sourceTree = "<group>"; };
+		8632C9D42112FF8D00707120 /* DbUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DbUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				8632C9C52112FEA600707120 /* LaunchScreen.storyboard */,
 				8632C9C82112FEA600707120 /* Info.plist */,
 				8632C9C92112FEA600707120 /* main.m */,
+				8632C9D02112FEE200707120 /* Employee.h */,
+				8632C9D12112FEE200707120 /* Employee.m */,
+				8632C9D32112FF8D00707120 /* DbUtil.h */,
+				8632C9D42112FF8D00707120 /* DbUtil.m */,
 			);
 			path = sqlite;
 			sourceTree = "<group>";
@@ -141,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8632C9D52112FF8D00707120 /* DbUtil.m in Sources */,
 				8632C9BF2112FEA300707120 /* ViewController.m in Sources */,
+				8632C9D22112FEE200707120 /* Employee.m in Sources */,
 				8632C9CA2112FEA600707120 /* main.m in Sources */,
 				8632C9BC2112FEA300707120 /* AppDelegate.m in Sources */,
 			);
@@ -284,12 +296,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RJ9N84757M;
 				INFOPLIST_FILE = sqlite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.sqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sqlite1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,12 +314,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RJ9N84757M;
 				INFOPLIST_FILE = sqlite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.sqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sqlite1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

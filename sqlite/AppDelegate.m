@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DbUtil.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    DbUtil *dbUtil = [[DbUtil alloc]init];
+//    [dbUtil initDatabase];
+    
+    
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
