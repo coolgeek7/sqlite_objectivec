@@ -10,9 +10,9 @@
 #import <sqlite3.h>
 #import "Employee.h"
 
+static NSString *databasePath;
 @interface DbUtil : NSObject{
     sqlite3 *mySqliteDb;
-    NSString *databasePath;
 }
 
 //@property (nonatomic,strong) NSString *databasePath;

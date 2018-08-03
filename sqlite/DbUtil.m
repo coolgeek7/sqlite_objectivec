@@ -85,7 +85,7 @@
     sqlite3_stmt *statement = NULL;
     const char *dbpath = [databasePath UTF8String];
     
-    NSLog(@"From save employee db path: %@",dbpath);
+    NSLog(@"From save employee db path: %s",dbpath);
     
     if(sqlite3_open(dbpath, &mySqliteDb)==SQLITE_OK){
         
@@ -181,7 +181,7 @@
     if(sqlite3_open(dbPath, &mySqliteDb)==SQLITE_OK){
         
         NSString *query = @"SELECT id,name,department,age FROM EMPLOYEES";
-        const char query_stmt = [query UTF8String];
+        const char *query_stmt = [query UTF8String];
         
         if(sqlite3_prepare_v2(mySqliteDb,query_stmt,-1,&statement,NULL)==SQLITE_OK){
             

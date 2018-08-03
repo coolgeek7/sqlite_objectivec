@@ -28,7 +28,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)insertEmployee:(id)sender {
+- (void)insertEmployee:(id)sender {
     
     dbUtil = [[DbUtil alloc]init];
     Employee *employee = [[Employee alloc]init];
@@ -37,8 +37,9 @@
     employee.age = 20;
     BOOL success = [dbUtil saveEmployee:employee];
     if(success == YES){
-        NSLog(@"Employee saved successfully");
-    }else{
+        NSLog(@"Employee %@ saved successfully",employee.name);
+//        ViewController *viewController = [[ViewController alloc]init];
+//        [viewController createAlert:@"Employee saved successfully"];    }else{
         NSLog(@"Error");
 //        ViewController *viewController = [[ViewController alloc]init];
 //        [viewController createAlert:@"Error inserting employee"];
@@ -49,9 +50,25 @@
 
 - (IBAction)deleteEmployee:(id)sender {
 }
+
 - (IBAction)findEmployee:(id)sender {
+    
+    dbUtil = [[DbUtil alloc]init];
+    Employee *employee = [dbUtil getEmployee:1];
+    if(employee!=NULL){
+        NSLog(@"Data found\n");
+        NSLog(@"Name:%@ Department:%@ Age:%d",employee.name,employee.department,employee.age);
+    }
+    
 }
 - (IBAction)listEmployee:(id)sender {
+    
+    dbUtil = [[DbUtil alloc]init];
+    NSArray *list = [dbUtil getEmployees];
+    for(Employee *e in list){
+        NSLog(@"Name:%@ Department:%@ Age:%d \n",e.name,e.department,e.age);
+    }
+    
 }
 
 
